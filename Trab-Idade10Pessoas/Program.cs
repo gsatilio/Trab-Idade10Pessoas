@@ -8,7 +8,7 @@ maioridade = 0;
 menoridade = 0;
 sair = "N";
 
-while ((contador <= 10) && (sair != "S"))
+while ((contador <= 10) && (sair != "S" && sair != "s"))
 {
     Console.WriteLine($"Por favor, informe a {contador}a idade:");
     idade = int.Parse(Console.ReadLine());
