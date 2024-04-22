@@ -1,5 +1,7 @@
 ﻿//2 - faça um programa que receba a idade de 10 pessoas e mostre a quantidade de maiores e menores de idade
 
+using System.Runtime.InteropServices;
+
 int idade, contador, maioridade, menoridade;
 string sair;
 
@@ -18,15 +20,23 @@ while ((contador <= 10) && (sair != "S" && sair != "s"))
         Console.WriteLine($"Por favor, informe uma {contador}a idade válida:");
         idade = int.Parse(Console.ReadLine());
     }
-
-    if (idade >= 18)
+    switch (idade)
+    {
+        case >= 18:
+            maioridade++;
+            break;
+        default:
+            menoridade++;
+            break;
+    }
+    /*if (idade >= 18)
     {
         maioridade++;
     }
     else
     {
         menoridade++;
-    }
+    }*/
 
     contador++;
 
